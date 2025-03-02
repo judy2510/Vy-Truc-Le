@@ -17,50 +17,58 @@
     box-shadow: none;
     background: transparent; /* Xóa nền nếu có */
 }
-
-        }
-        .sidebar {
-position: fixed; /* Giữ cố định */
-left: 0; /* Sát bên trái */
-top: 0; /* Căn từ trên xuống */
-width: 100px; /* Độ rộng cột profile */
-height: 100vh; /* Chiều cao toàn bộ màn hình */
-background-color: white; /* Giữ nền nếu cần */
-padding: 5px; /* Khoảng cách bên trong */
-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+      .sidebar {
+    position: fixed; /* Cố định cột trái */
+    left: 0; /* Sát mép trái */
+    top: 0; /* Cố định từ trên xuống */
+    width: 250px; /* Điều chỉnh độ rộng */
+    height: 100vh; /* Chiều cao 100% màn hình */
+    background-color: white; /* Cùng màu với nền */
+    padding: 20px; /* Khoảng cách bên trong */
 }
-        }
-        .sidebar img {
-            width: 80%;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-            margin-bottom: 15px;
-        }
-        .sidebar h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .sidebar p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-        .sidebar li {
-            margin: 5px 0;
-        }
-        .sidebar a {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 16px;
-            display: block;
-        }
-        .content {
-    margin-left: 270px; /* Để tránh bị dính vào cột profile */
+
+/* Ảnh trong profile */
+.sidebar img {
+    width: 100%; /* Căng hết chiều ngang */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Tiêu đề Profile */
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Văn bản Profile */
+.sidebar p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Danh sách liên kết */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.sidebar li {
+    margin: 5px 0;
+}
+
+.sidebar a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+/* Nội dung chính bên phải */
+.content {
+    margin-left: 250px; /* Để tránh bị dính vào cột profile */
     padding: 20px;
 }
         h3 {
