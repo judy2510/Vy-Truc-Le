@@ -8,34 +8,52 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background: #ffffff; /* Màu nền trắng */
+            margin: 0;
+            padding: 0;
         }
         .container {
             display: flex;
             max-width: 900px;
             margin: auto;
+            background: #ffffff;
+            padding: 20px;
         }
         .sidebar {
             width: 250px;
             padding: 20px;
-            text-align: center;
-            background: #f4f4f4;
+            background: #ffffff; /* Đồng bộ nền trắng */
+            text-align: left;
+            border-right: 2px solid #ddd;
         }
         .sidebar img {
-            width: 100%; /* Đảm bảo hình vuông */
+            width: 100%;
             height: auto;
             border-radius: 10px;
+            display: block;
+            margin-bottom: 15px;
         }
         .sidebar h2 {
-            font-size: 20px;
+            font-size: 22px;
+            margin-bottom: 10px;
         }
         .sidebar p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .sidebar li {
             margin: 5px 0;
         }
         .sidebar a {
-            display: block;
             color: #007bff;
             text-decoration: none;
-            margin: 5px 0;
+            font-size: 16px;
+            display: block;
         }
         .content {
             flex: 1;
@@ -43,6 +61,12 @@
         }
         h3 {
             color: #007bff;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .content p, .content li {
+            font-size: 18px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -53,20 +77,33 @@
             <h2>Lê Trúc Vy</h2>
             <p>Master student at KAIST</p>
             <p>Ho Chi Minh City, Vietnam</p>
-            <a href="mailto:anvo@example.com">Email</a>
-            <a href="https://www.researchgate.net/profile/An-Vo">ResearchGate</a>
-            <a href="https://twitter.com/anvo">Twitter</a>
-            <a href="https://www.linkedin.com/in/anvo">LinkedIn</a>
-            <a href="https://github.com/anvo">Github</a>
-            <a href="https://scholar.google.com/citations?user=anvo">Google Scholar</a>
+            <ul>
+                <li><a href="mailto:anvo@example.com">Email</a></li>
+                <li><a href="https://www.researchgate.net/profile/An-Vo">ResearchGate</a></li>
+                <li><a href="https://twitter.com/anvo">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/anvo">LinkedIn</a></li>
+                <li><a href="https://github.com/anvo">Github</a></li>
+                <li><a href="https://scholar.google.com/citations?user=anvo">Google Scholar</a></li>
+            </ul>
         </div>
         <div class="content">
             <p>I recently got an Excellent score (GPA: 3.59/4.00) in Psychology...</p>
             <h3>EDUCATION</h3>
             <p><strong>2018 – 2022</strong> Third-year Student...</p>
-            <h3>CERTIFICATION</h3>
-            <h3>HONOR AND AWARDS</h3>
-            <p><strong>2019 - 2020</strong></p>
+            <h3>Conferences</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
+            <h3>International Conference Publications</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
+            <h3>Publications</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
+            <h3>Academic Activities</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
+            <h3>Work Experiences</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
+            <h3>Awards</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
+            <h3>Selected Scholarships</h3>
+            <p><strong>2018 – 2022</strong> Third-year Student...</p>
             <ul>
                 <li>Third Prize in the City Level Contest...</li>
             </ul>
