@@ -6,6 +6,32 @@
     <title>Vy Truc Le</title>
     <link rel="stylesheet" href="style.css">
     <style>
+/* Thanh header giống trang mẫu */
+.top-header {
+    width: 100%;
+    background-color: white; /* Màu nền */
+    color: black; /* Màu chữ */
+    text-align: left; /* Căn trái */
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: fixed; /* Cố định trên cùng */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Luôn hiển thị trên cùng */
+    border-bottom: 1px solid #ddd; /* Đường viền dưới */
+}
+
+/* Đẩy phần nội dung xuống để không bị che */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
+    padding: 20px;
+}
         body {
             <header class="top-header">
     <h1>Vy Truc Le</h1>
