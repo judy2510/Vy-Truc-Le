@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding-top: 100px; /* Điều chỉnh để tránh nội dung bị che bởi thanh tiêu đề */
+    padding-top: 80px; /* Điều chỉnh để tránh nội dung bị che bởi thanh tiêu đề */
 }
 
 /* Thanh tiêu đề cố định */
@@ -34,9 +34,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    max-width: 1200px; /* Hoặc giá trị lớn hơn nếu cần */
+    max-width: 1200px;
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto 0 auto; /* Thêm khoảng cách trên để tránh header che nội dung */
 }
 
 /* Sidebar */
@@ -45,6 +45,10 @@ body {
     min-width: 220px;
     text-align: center;
     flex-shrink: 0; /* Giữ nguyên kích thước, tránh bị ép */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Ảnh trong sidebar */
@@ -58,8 +62,11 @@ body {
     flex-grow: 1;
     max-width: 900px;
     width: 100%;
+    padding: 20px;
     word-wrap: break-word;
-    overflow: visible;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive cho iPad (từ 768px đến 1024px) */
@@ -83,11 +90,12 @@ body {
     .container {
         flex-direction: column;
         align-items: center;
+        margin-top: 100px; /* Tăng khoảng cách trên để tránh header che mất nội dung */
     }
 
     .sidebar, .content {
-        width: 100%;
-        padding-left: 0;
+        width: 90%;
+        padding: 15px;
     }
 
     .content {
