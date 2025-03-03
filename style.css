@@ -1,16 +1,12 @@
-@@ -1,56 +1,65 @@
 /* Đảm bảo trang không bị tràn ngang */
 body, html {
     width: 100%;
     overflow-x: hidden;
-/* Reset margin và padding để tránh lỗi giao diện */
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Tăng độ rộng của container để phù hợp với màn hình lớn hơn */
 /* Cấu trúc chính */
 body {
     font-family: Arial, sans-serif;
@@ -26,25 +22,18 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap; /* Giúp các phần tự động xuống hàng khi màn hình nhỏ */
     justify-content: space-between;
-    flex-wrap: wrap; /* Cho phép xuống hàng nếu không đủ chỗ */
 }
 
-/* Điều chỉnh sidebar */
 /* Sidebar */
 .sidebar {
-    width: 25%; /* Giảm kích thước sidebar */
-    min-width: 200px; /* Đảm bảo không quá nhỏ */
     width: 30%;
     min-width: 220px;
     text-align: center;
 }
 
-/* Ảnh đại diện */
 /* Ảnh trong sidebar */
 .sidebar img {
-    width: 120px; /* Giảm kích thước ảnh */
     width: 150px;
     border-radius: 50%;
 }
@@ -52,13 +41,11 @@ body {
 /* Nội dung chính */
 .content {
     width: 70%;
-    min-width: 450px; /* Đảm bảo không quá nhỏ */
+    min-width: 450px;
     padding-left: 20px;
-    min-width: 450px; /* Đảm bảo nội dung chính không bị thu nhỏ quá mức */
 }
 
 /* Responsive cho iPad */
-/* Responsive cho iPad (từ 768px đến 1024px) */
 @media (max-width: 1024px) {
     .container {
         flex-direction: row;
@@ -66,22 +53,21 @@ body {
     }
 
     .sidebar {
-        width: 30%;
         width: 35%;
     }
 
     .content {
-        width: 65%;
         width: 60%;
     }
 }
 
 /* Responsive cho điện thoại */
-/* Responsive cho màn hình nhỏ (điện thoại, iPad dọc) */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-@@ -60,5 +69,6 @@ body, html {
+        align-items: center;
+    }
+
     .sidebar, .content {
         width: 100%;
         padding-left: 0;
