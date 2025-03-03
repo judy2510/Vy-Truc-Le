@@ -1,88 +1,74 @@
-/* Đảm bảo trang có thể cuộn trên mọi thiết bị */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: auto; /* Cho phép cuộn ngang */
-    overflow-y: auto; /* Cho phép cuộn dọc */
-    font-family: Arial, sans-serif;
-    background: #F8F9FA;
+/* Reset margin và padding để tránh lỗi giao diện */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
-.top-header {
-    width: 100%;
-    background-color: white;
-    color: black;
-    text-align: left;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Đẩy nội dung xuống dưới header */
-.main-content {
-    margin-top: 80px; /* Cách header một khoảng */
+/* Cấu trúc chính */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     padding: 20px;
+}
+
+/* Container chính */
+.container {
+    max-width: 1100px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống hàng nếu không đủ chỗ */
 }
 
 /* Sidebar */
-/* Thiết lập sidebar cố định */
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 260px; /* Điều chỉnh độ rộng như trong ảnh */
-    height: 100vh; /* Chiếm toàn bộ chiều cao */
-    background-color: white;
-    padding: 20px;
-    border-right: 1px solid #ddd;
+    width: 30%;
+    min-width: 220px;
     text-align: center;
 }
 
-/* Chỉnh kích thước ảnh nhỏ lại */
+/* Ảnh trong sidebar */
 .sidebar img {
-    width: 100%;
-    max-width: 150px; /* Giữ kích thước nhỏ như ảnh bạn cung cấp */
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto 15px auto;
+    width: 150px;
+    border-radius: 50%;
 }
 
-/* Định dạng danh sách liên kết */
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-}
-
-.sidebar ul li {
-    margin-bottom: 5px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: blue;
-    font-weight: bold;
-}
-
-/* Nội dung chính bên phải */
+/* Nội dung chính */
 .content {
-    margin-left: 280px; /* Để tránh đè lên sidebar */
-    padding: 20px;
+    width: 70%;
+    min-width: 450px; /* Đảm bảo không quá nhỏ */
+    padding-left: 20px;
 }
 
-/* Tăng khoảng cách cho body để tránh đè */
-body {
-    font-family: Arial, sans-serif;
-    background: #F8F9FA;
-    margin: 0;
-    padding: 0;
+/* Responsive cho iPad (từ 768px đến 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .content {
+        width: 60%;
+    }
+}
+
+/* Responsive cho màn hình nhỏ (điện thoại, iPad dọc) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
 }
