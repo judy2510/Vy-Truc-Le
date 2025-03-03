@@ -16,19 +16,21 @@ body {
 
 /* Container chính */
 .container {
+    display: flex;
+    align-items: flex-start;  
+    justify-content: space-between;
+    gap: 40px; /* Tăng khoảng cách giữa sidebar và nội dung */
     max-width: 1100px;
-    background: white;
     margin: auto;
     padding: 20px;
+    background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
 }
 
-/* Sidebar */
+
 .sidebar {
-    width: 30%;
-    min-width: 220px;
+    width: 22%;  /* Giảm bớt kích thước sidebar */
+    min-width: 180px;
     text-align: center;
 }
 
