@@ -9,21 +9,19 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #666666
+    color: #999999; /* Màu chữ xám nhạt */
     padding: 20px;
     overflow-x: hidden; /* Tránh cuộn ngang ngoài ý muốn */
+    line-height: 1.6; /* Giúp dễ đọc hơn */
 }
 
 /* Container chính */
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap; /* Đảm bảo xuống hàng khi cần */
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    flex-wrap: wrap; /* Đảm bảo xuống hàng nếu không đủ chỗ */
 }
 
 /* Sidebar */
@@ -32,6 +30,7 @@ body {
     min-width: 250px; /* Đảm bảo không bị quá nhỏ */
     text-align: center;
     flex-shrink: 0;
+    padding: 10px;
 }
 
 /* Ảnh trong sidebar */
@@ -46,7 +45,7 @@ body {
     max-width: 900px;
     width: 100%;
     word-wrap: break-word;
-    overflow: visible;
+    overflow: hidden;
     padding-left: 20px;
 }
 
@@ -60,6 +59,7 @@ body {
     .sidebar {
         width: 100%;
         text-align: center;
+        padding-bottom: 20px;
     }
 
     .content {
@@ -73,12 +73,12 @@ body {
     .container {
         flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
 
     .sidebar {
         width: 100%;
         padding: 10px;
-        text-align: center;
     }
 
     .content {
