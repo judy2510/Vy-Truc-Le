@@ -7,9 +7,12 @@
 
 /* Cấu trúc chính */
 body {
+    body {
+    font-size: 18px; /* Tăng kích thước chữ */
+    line-height: 1.8; /* Tăng giãn dòng để chữ thoáng hơn */
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Container chính */
@@ -20,8 +23,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Tránh chồng lấn */
+    flex-wrap: wrap; /* Cho phép xuống hàng nếu không đủ chỗ */
 }
 
 /* Sidebar */
@@ -29,7 +31,6 @@ body {
     width: 30%;
     min-width: 220px;
     text-align: center;
-    flex-shrink: 0; /* Giữ nguyên kích thước, tránh bị ép */
 }
 
 /* Ảnh trong sidebar */
@@ -40,10 +41,9 @@ body {
 
 /* Nội dung chính */
 .content {
-    flex-grow: 1;
     width: 70%;
+    min-width: 450px; /* Đảm bảo không quá nhỏ */
     padding-left: 20px;
-    min-width: auto; /* Đảm bảo không quá nhỏ */
 }
 
 /* Responsive cho iPad (từ 768px đến 1024px) */
@@ -72,9 +72,6 @@ body {
     .sidebar, .content {
         width: 100%;
         padding-left: 0;
-    }
-
-    .content {
-        text-align: left; /* Để chữ không bị căn giữa */
+        text-align: center;
     }
 }
