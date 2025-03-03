@@ -1,110 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vy Truc Le</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-/* Thanh header giống trang mẫu */
-.top-header {
-    width: 100%;
-    background-color: white; /* Màu nền */
-    color: black; /* Màu chữ */
-    text-align: left; /* Căn trái */
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 20px;
-    position: fixed; /* Cố định trên cùng */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Luôn hiển thị trên cùng */
-    border-bottom: 1px solid #ddd; /* Đường viền dưới */
-}
+        /* Thanh header giống trang mẫu */
+        .top-header {
+            width: 100%;
+            background-color: white;
+            color: black;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd;
+        }
 
-/* Đẩy phần nội dung xuống để không bị che */
-        <div class="top-bar">
-    Vy Truc Le
-</div>
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.main-content {
-    margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
-    padding: 20px;
-}
+        /* Đẩy phần nội dung xuống để không bị che */
         body {
-            <header class="top-header">
-    <h1>Vy Truc Le</h1>
-</header>
-
             font-family: Arial, sans-serif;
-            background: #F8F9FA; /* Màu nền trắng */
+            background: #F8F9FA;
             margin: 0;
             padding: 0;
         }
+
+        .main-content {
+            margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
+            padding: 20px;
+        }
+
         .container {
-    border: none;
-    box-shadow: none;
-    background: transparent; /* Xóa nền nếu có */
-}
-      .sidebar {
-    position: fixed; /* Cố định cột trái */
-    left: 0; /* Sát mép trái */
-    top: 0; /* Cố định từ trên xuống */
-    width: 180px; /* Điều chỉnh độ rộng */
-    height: 100vh; /* Chiều cao 100% màn hình */
-    background-color: white; /* Cùng màu với nền */
-    padding: 20px; /* Khoảng cách bên trong */
-}
+            border: none;
+            box-shadow: none;
+            background: transparent;
+        }
 
-/* Ảnh trong profile */
-.sidebar img {
-    width: 100%; /* Căng hết chiều ngang */
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin-bottom: 15px;
-}
+        /* Sidebar bên trái */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 70px; /* Để không bị che bởi header */
+            width: 200px;
+            height: calc(100vh - 70px); /* Để không bị che bởi header */
+            background-color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
 
-/* Tiêu đề Profile */
-.sidebar h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
+        /* Ảnh trong profile */
+        .sidebar img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin-bottom: 15px;
+        }
 
-/* Văn bản Profile */
-.sidebar p {
-    font-size: 16px;
-    margin: 5px 0;
-}
+        /* Tiêu đề Profile */
+        .sidebar h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
 
-/* Danh sách liên kết */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 15px;
-}
+        /* Văn bản Profile */
+        .sidebar p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
 
-.sidebar li {
-    margin: 5px 0;
-}
+        /* Danh sách liên kết */
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 15px;
+        }
 
-.sidebar a {
-    color: #8c939b;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-}
+        .sidebar li {
+            margin: 5px 0;
+        }
 
-/* Nội dung chính bên phải */
-.content {
-    margin-left: 100px; /* Để tránh bị dính vào cột profile */
-    padding: 20px;
-}
+        .sidebar a {
+            color: #8c939b;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+        }
+
+        /* Nội dung chính bên phải */
+        .content {
+            margin-left: 220px; /* Cách sidebar 200px + padding */
+            padding: 20px;
+        }
+
         h3 {
             color: #8c939b;
             font-size: 20px;
@@ -112,6 +106,16 @@ body {
         }
     </style>
 </head>
+<body>
+
+    <!-- Header -->
+    <header class="top-header">
+        Vy Truc Le
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    
     <!--Sửa nội dung từ đây-->
 <body>
     <div class="container">
