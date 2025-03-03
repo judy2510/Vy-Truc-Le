@@ -44,3 +44,32 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Đảm bảo trang web không bị tràn ra ngoài màn hình */
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Định dạng container để hiển thị tốt trên màn hình nhỏ */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Xếp dọc thay vì ngang */
+        align-items: center; /* Căn giữa nội dung */
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
+        text-align: center;
+    }
+
+    .sidebar img {
+        width: 120px; /* Giảm kích thước ảnh nếu cần */
+    }
+
+    .content {
+        width: 100%; /* Đảm bảo phần nội dung chiếm toàn bộ màn hình */
+        padding-left: 0;
+    }
+}
+
