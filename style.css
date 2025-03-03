@@ -7,9 +7,12 @@
 
 /* Cấu trúc chính */
 body {
+    body {
+    font-size: 18px; /* Tăng kích thước chữ */
+    line-height: 1.8; /* Tăng giãn dòng để chữ thoáng hơn */
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Container chính */
