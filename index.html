@@ -1,118 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vy Truc Le</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-/* Thanh header giống trang mẫu */
-.top-header {
-    width: 100%;
-    background-color: white; /* Màu nền */
-    color: black; /* Màu chữ */
-    text-align: left; /* Căn trái */
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 20px;
-    position: fixed; /* Cố định trên cùng */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Luôn hiển thị trên cùng */
-    border-bottom: 1px solid #ddd; /* Đường viền dưới */
-}
-
-/* Đẩy phần nội dung xuống để không bị che */
-        <div class="top-bar">
-    Vy Truc Le
-</div>
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.main-content {
-    margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
-    padding: 20px;
-}
-        body {
-            <header class="top-header">
-    <h1>Vy Truc Le</h1>
-</header>
-
-            font-family: Arial, sans-serif;
-            background: #F8F9FA; /* Màu nền trắng */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        .header {
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 4px 2px -2px gray;
+            z-index: 1000;
         }
         .container {
-    border: none;
-    box-shadow: none;
-    background: transparent; /* Xóa nền nếu có */
-}
-      .sidebar {
-    position: fixed; /* Cố định cột trái */
-    left: 0; /* Sát mép trái */
-    top: 0; /* Cố định từ trên xuống */
-    width: 180px; /* Điều chỉnh độ rộng */
-    height: 100vh; /* Chiều cao 100% màn hình */
-    background-color: white; /* Cùng màu với nền */
-    padding: 20px; /* Khoảng cách bên trong */
-}
-
-/* Ảnh trong profile */
-.sidebar img {
-    width: 100%; /* Căng hết chiều ngang */
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* Tiêu đề Profile */
-.sidebar h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-/* Văn bản Profile */
-.sidebar p {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* Danh sách liên kết */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 15px;
-}
-
-.sidebar li {
-    margin: 5px 0;
-}
-
-.sidebar a {
-    color: #8c939b;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-}
-
-/* Nội dung chính bên phải */
-.content {
-    margin-left: 100px; /* Để tránh bị dính vào cột profile */
-    padding: 20px;
-}
-        h3 {
-            color: #8c939b;
-            font-size: 20px;
-            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 60px;
         }
-        .content p, .content li {
-            font-size: 15px;
-            line-height: 1.6;
+        .left {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+        }
+        .left img {
+            width: 80%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        .content {
+            flex: 3;
+            padding: 20px;
+            min-width: 300px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left {
+                order: -1;
+            }
         }
     </style>
 </head>
