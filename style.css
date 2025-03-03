@@ -42,8 +42,8 @@ body {
 
 /* Nội dung chính */
 .content {
-    width: 70%;
-    min-width: 450px;
+    flex-grow: 1;  /* Giúp nội dung mở rộng hết phần còn lại */
+    min-width: 600px; /* Đảm bảo nội dung chính không quá hẹp */
     padding-left: 20px;
 }
 
