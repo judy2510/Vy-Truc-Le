@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding-top: 100px; /* Điều chỉnh để tránh nội dung bị che bởi thanh tiêu đề */
+    padding-top: 80px; /* Điều chỉnh để tránh nội dung bị che bởi thanh tiêu đề */
 }
 
 /* Thanh tiêu đề cố định */
@@ -27,12 +27,6 @@ body {
     z-index: 1000;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* Đảm bảo nội dung không bị che bởi thanh tiêu đề */
-body {
-    padding-top: 70px; /* Điều chỉnh khoảng cách cho phù hợp */
-}
-
 
 /* Container chính */
 .container {
