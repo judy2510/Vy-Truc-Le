@@ -1,82 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vy Truc Le</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
+/* Thanh header giống trang mẫu */
+.top-header {
+    width: 100%;
+    background-color: white; /* Màu nền */
+    color: black; /* Màu chữ */
+    text-align: left; /* Căn trái */
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: fixed; /* Cố định trên cùng */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Luôn hiển thị trên cùng */
+    border-bottom: 1px solid #ddd; /* Đường viền dưới */
+}
+
+/* Đẩy phần nội dung xuống để không bị che */
+        <div class="top-bar">
+    Vy Truc Le
+</div>
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
+    padding: 20px;
+}
+        body {
+            <header class="top-header">
+    <h1>Vy Truc Le</h1>
+</header>
+
+            font-family: Arial, sans-serif;
+            background: #F8F9FA; /* Màu nền trắng */
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            padding: 15px;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
         }
         .container {
-            display: flex;
-            max-width: 1200px;
-            margin: 80px auto 20px;
-            padding: 20px;
+    border: none;
+    box-shadow: none;
+    background: transparent; /* Xóa nền nếu có */
+}
+      .sidebar {
+    position: fixed; /* Cố định cột trái */
+    left: 0; /* Sát mép trái */
+    top: 0; /* Cố định từ trên xuống */
+    width: 180px; /* Điều chỉnh độ rộng */
+    height: 100vh; /* Chiều cao 100% màn hình */
+    background-color: white; /* Cùng màu với nền */
+    padding: 20px; /* Khoảng cách bên trong */
+}
+
+/* Ảnh trong profile */
+.sidebar img {
+    width: 100%; /* Căng hết chiều ngang */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Tiêu đề Profile */
+.sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Văn bản Profile */
+.sidebar p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Danh sách liên kết */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.sidebar li {
+    margin: 5px 0;
+}
+
+.sidebar a {
+    color: #8c939b;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+/* Nội dung chính bên phải */
+.content {
+    margin-left: 100px; /* Để tránh bị dính vào cột profile */
+    padding: 20px;
+}
+        h3 {
+            color: #8c939b;
+            font-size: 20px;
+            margin-top: 20px;
         }
-        .left-column {
-            flex: 1;
-            max-width: 300px;
-            text-align: center;
-            background-color: white;
-            padding: 20px;
-        }
-        .left-column img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .right-column {
-            flex: 2;
-            background-color: white;
-            padding: 20px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .left-column, .right-column {
-                width: 100%;
-                max-width: 100%;
-            }
+        .content p, .content li {
+            font-size: 15px;
+            line-height: 1.6;
         }
     </style>
 </head>
+    <!--Sửa nội dung từ đây-->
 <body>
-    <div class="navbar">Vy Truc Le</div>
     <div class="container">
-        <div class="left-column">
-            <img src="profile.jpg" alt="Vy Truc Le">
-            <h2>Vy Truc Le</h2>
-            <p>Bachelor of Psychology<br>Ho Chi Minh City, Vietnam</p>
+        <div class="sidebar">
+            <img src="trucvy.png" alt="Profile Picture">
+            <!-- nội dung cột bên trái-->
+            <h2> <style="color: #8c939b; ">VY TRUC LE</h2>
+            <!--ngành học-->
+            <p>Bachelor of Psychology</p>
+            <!--địa chỉ nơi làm việc-->
+            <p>Ho Chi Minh City, Vietnam</p>
+            <ul>
+                <!--Sửa link-->
+                <li><a href="mailto:vytrucle.judy@gmail.com">Email</a></li>
+                <li><a href="https://www.researchgate.net/profile/Vy-Le-121?ev=hdr_xprf">ResearchGate</a></li>
+                <li><a href="https://www.linkedin.com/in/vy-truc-le-a10155276/">LinkedIn</a></li>
+                <li><a href="https://scholar.google.com/citations?user=pnxR0u0AAAAJ&hl=vi&oi=ao">Google Scholar</a></li>
+            </ul>
         </div>
-        <div class="right-column">
-            <h2>About Me</h2>
-            <p>
-                I hold a Bachelor’s degree in Psychology from Ho Chi Minh University of Education, Vietnam. During my undergraduate studies, I worked as a Research Assistant in the university’s laboratory 
-                <strong style="color: #69b5d9;">under the supervision of Ph.D. Vinh-Long Tran-Chi</strong>, where I gained hands-on experience in psychological research.  
-                My research interests focus on cognitive mechanisms in mental health and their implications for psychological interventions.
-            </p>
-        </main>
-    </div>
+        <div class="content">
+            <!--Sửa lời giới thiệu-->
+           <p>
+  I hold a Bachelor’s degree in Psychology from Ho Chi Minh University of Education, Vietnam.During my undergraduate studies, I worked as a Research Assistant in the university’s laboratory <strong style="color: #69b5d9; ">under the supervision of Ph.D. Vinh-Long Tran-Chi</strong>, where I gained hands-on experience in psychological research.  
+  My research interests focus on cognitive mechanisms in mental health and their implications for psychological interventions.<br>
+</p>
             <!--nội dung-->
             <!--
                 nội dung viết trong cặp <p></p> là chữ bình thường
@@ -145,7 +209,7 @@
                 <p><strong>Prize:</strong> Bronze Medal.<p>
                 <p><strong>Field:</strong> History.<p>
 
-            <p><strong>[2018] Competition: Summer Olympic in the Mekong Delta </strong> (Hosted by Huynh Man Dat High School for the Gifted, Kien Giang Province).<p>
+            <p><strong>[2018] Competition: Summer Olympic in the Mekong Delta </strong> (Hosted by Huynh Man Dat High School for the Gifted, Kieng Giang Province).<p>
                 <p><strong>Prize:</strong> Gold Medal.<p>
                 <p><strong>Field:</strong> History.<p>
                 <!--đây là cách viết danh sách-->
