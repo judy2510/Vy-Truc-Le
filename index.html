@@ -5,117 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vy Truc Le</title>
     <style>
-        /* Đảm bảo trang hiển thị đúng */
-        html, body {
-            width: 100%;
-            height: 100%;
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: #F8F9FA;
+            box-sizing: border-box;
         }
-
-        /* Container chính */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        .header {
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0px 4px 2px -2px gray;
+            z-index: 1000;
+        }
         .container {
             display: flex;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
+            flex-wrap: wrap;
+            padding-top: 60px;
         }
-
-        /* Sidebar cố định */
-        .sidebar {
-            width: 250px;
-            background: white;
+        .left {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
             padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            height: 100vh; /* Chiều cao toàn màn hình */
-            overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+            background-color: white;
         }
-
-        .sidebar img {
-            width: 150px; /* Giảm kích thước ảnh */
-            height: auto;
-            display: block;
-            margin: 0 auto 15px;
+        .left img {
+            width: 80%;
+            max-width: 200px;
             border-radius: 10px;
         }
-
-        .sidebar h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        .sidebar p {
-            text-align: center;
-            color: #555;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-
-        /* Nội dung chính */
         .content {
-            margin-left: 270px; /* Dịch sang phải để tránh trùng với sidebar */
+            flex: 3;
             padding: 20px;
-            flex: 1;
+            min-width: 300px;
         }
-
-        /* Định dạng responsive */
-        @media (max-width: 1024px) {
-            .sidebar {
-                width: 200px;
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
             }
-            .content {
-                margin-left: 220px;
-            }
-        }
-
-        @media (max-width: 768px) { /* Điện thoại */
-            .sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                text-align: center;
-            }
-            .content {
-                margin-left: 0;
-                padding: 15px;
+            .left {
+                order: -1;
             }
         }
     </style>
 </head>
+    <!--Sửa nội dung từ đây-->
 <body>
-
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
+        <div class="sidebar">
             <img src="trucvy.png" alt="Profile Picture">
-            <h2>VY TRUC LE</h2>
+            <!-- nội dung cột bên trái-->
+            <h2> <style="color: #8c939b; ">VY TRUC LE</h2>
+            <!--ngành học-->
             <p>Bachelor of Psychology</p>
+            <!--địa chỉ nơi làm việc-->
             <p>Ho Chi Minh City, Vietnam</p>
             <ul>
+                <!--Sửa link-->
                 <li><a href="mailto:vytrucle.judy@gmail.com">Email</a></li>
                 <li><a href="https://www.researchgate.net/profile/Vy-Le-121?ev=hdr_xprf">ResearchGate</a></li>
                 <li><a href="https://www.linkedin.com/in/vy-truc-le-a10155276/">LinkedIn</a></li>
                 <li><a href="https://scholar.google.com/citations?user=pnxR0u0AAAAJ&hl=vi&oi=ao">Google Scholar</a></li>
             </ul>
-        </aside>
-        </main>
-    </div>
+        </div>
         <div class="content">
             <!--Sửa lời giới thiệu-->
            <p>
@@ -190,7 +151,7 @@
                 <p><strong>Prize:</strong> Bronze Medal.<p>
                 <p><strong>Field:</strong> History.<p>
 
-            <p><strong>[2018] Competition: Summer Olympic in the Mekong Delta </strong> (Hosted by Huynh Man Dat High School for the Gifted, Kien Giang Province).<p>
+            <p><strong>[2018] Competition: Summer Olympic in the Mekong Delta </strong> (Hosted by Huynh Man Dat High School for the Gifted, Kieng Giang Province).<p>
                 <p><strong>Prize:</strong> Gold Medal.<p>
                 <p><strong>Field:</strong> History.<p>
                 <!--đây là cách viết danh sách-->
