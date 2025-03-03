@@ -6,28 +6,39 @@ body, html {
 
 /* Tăng độ rộng của container để phù hợp với màn hình lớn hơn */
 .container {
-    max-width: 1000px; /* Hoặc tăng lên nếu cần */
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Giúp các phần tự động xuống hàng khi màn hình nhỏ */
+    justify-content: space-between;
 }
 
-/* Điều chỉnh sidebar và content */
+/* Điều chỉnh sidebar */
 .sidebar {
-    width: 25%; /* Giảm từ 30% xuống để có thêm không gian cho nội dung */
+    width: 25%; /* Giảm kích thước sidebar */
+    min-width: 200px; /* Đảm bảo không quá nhỏ */
     text-align: center;
 }
 
-.content {
-    width: 75%;
-    padding-left: 20px;
+/* Ảnh đại diện */
+.sidebar img {
+    width: 120px; /* Giảm kích thước ảnh */
+    border-radius: 50%;
 }
 
-/* Tối ưu hóa cho iPad (màn hình rộng 768px trở lên) */
+/* Nội dung chính */
+.content {
+    width: 70%;
+    padding-left: 20px;
+    min-width: 450px; /* Đảm bảo nội dung chính không bị thu nhỏ quá mức */
+}
+
+/* Responsive cho iPad */
 @media (max-width: 1024px) {
     .container {
-        max-width: 90%; /* Giữ bố cục rộng nhưng không bị ép vào mép */
         flex-direction: row;
+        justify-content: center;
     }
 
     .sidebar {
@@ -35,11 +46,11 @@ body, html {
     }
 
     .content {
-        width: 70%;
+        width: 65%;
     }
 }
 
-/* Điều chỉnh hiển thị cho màn hình nhỏ hơn như điện thoại */
+/* Responsive cho điện thoại */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
