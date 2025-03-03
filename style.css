@@ -33,52 +33,56 @@ html, body {
 }
 
 /* Sidebar */
+/* Thiết lập sidebar cố định */
 .sidebar {
     position: fixed;
     left: 0;
-    top: 80px; /* Không bị che bởi header */
-    width: 250px; /* Điều chỉnh độ rộng */
-    height: calc(100vh - 80px); /* Tính toán chiều cao */
+    top: 0;
+    width: 260px; /* Điều chỉnh độ rộng như trong ảnh */
+    height: 100vh; /* Chiếm toàn bộ chiều cao */
     background-color: white;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Cho phép cuộn sidebar nếu nội dung quá dài */
+    border-right: 1px solid #ddd;
+    text-align: center;
 }
 
-/* Nội dung chính */
-.content {
-    margin-left: 270px; /* Cách sidebar một khoảng */
-    padding: 20px;
-    max-width: 900px; /* Giữ cho nội dung không quá rộng */
-}
-
-/* Giữ cho hình ảnh không bị méo */
+/* Chỉnh kích thước ảnh nhỏ lại */
 .sidebar img {
     width: 100%;
+    max-width: 150px; /* Giữ kích thước nhỏ như ảnh bạn cung cấp */
     height: auto;
     border-radius: 10px;
+    display: block;
+    margin: 0 auto 15px auto;
 }
 
-/* Định dạng responsive */
-@media (max-width: 1024px) { /* iPad và thiết bị nhỏ hơn */
-    .sidebar {
-        width: 200px; /* Giảm kích thước sidebar */
-    }
-    .content {
-        margin-left: 220px; /* Điều chỉnh để phù hợp */
-        max-width: 100%;
-    }
+/* Định dạng danh sách liên kết */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
 }
 
-@media (max-width: 768px) { /* Điện thoại */
-    .sidebar {
-        position: relative; /* Không còn cố định */
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-    .content {
-        margin-left: 0;
-        padding: 15px;
-    }
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+/* Nội dung chính bên phải */
+.content {
+    margin-left: 280px; /* Để tránh đè lên sidebar */
+    padding: 20px;
+}
+
+/* Tăng khoảng cách cho body để tránh đè */
+body {
+    font-family: Arial, sans-serif;
+    background: #F8F9FA;
+    margin: 0;
+    padding: 0;
 }
