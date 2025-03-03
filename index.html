@@ -5,64 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vy Truc Le</title>
     <style>
-        /* Đảm bảo trang có thể cuộn trên mọi thiết bị */
+        /* Đảm bảo trang hiển thị đúng */
         html, body {
             width: 100%;
             height: 100%;
-            overflow-x: auto; /* Cho phép cuộn ngang */
-            overflow-y: auto; /* Cho phép cuộn dọc */
-            font-family: Arial, sans-serif;
-            background: #F8F9FA;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background: #F8F9FA;
         }
 
         /* Container chính */
         .container {
             display: flex;
-            flex-wrap: wrap;
             max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
 
-        /* Sidebar */
+        /* Sidebar cố định */
         .sidebar {
-            flex: 1;
-            min-width: 250px;
+            width: 250px;
             background: white;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: 100vh; /* Chiều cao toàn màn hình */
+            overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
         }
+
         .sidebar img {
-            width: 100%;
+            width: 150px; /* Giảm kích thước ảnh */
             height: auto;
-            border-radius: 0px;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .sidebar p {
+            text-align: center;
+            color: #555;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #007BFF;
         }
 
         /* Nội dung chính */
         .content {
-            flex: 2;
+            margin-left: 270px; /* Dịch sang phải để tránh trùng với sidebar */
             padding: 20px;
+            flex: 1;
         }
 
         /* Định dạng responsive */
-        @media (max-width: 1024px) { /* iPad và thiết bị nhỏ hơn */
-            .container {
-                flex-direction: column;
-            }
+        @media (max-width: 1024px) {
             .sidebar {
-                width: 100%;
-                text-align: center;
+                width: 200px;
+            }
+            .content {
+                margin-left: 220px;
             }
         }
 
         @media (max-width: 768px) { /* Điện thoại */
             .sidebar {
                 position: relative;
+                width: 100%;
                 height: auto;
+                text-align: center;
             }
             .content {
+                margin-left: 0;
                 padding: 15px;
             }
         }
@@ -70,33 +100,34 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="top-header">
-        Vy Truc Le
-    </header>
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-    
-    <!--Sửa nội dung từ đây-->
-<body>
     <div class="container">
-        <div class="sidebar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
             <img src="trucvy.png" alt="Profile Picture">
-            <!-- nội dung cột bên trái-->
-            <h2> <style="color: #8c939b; ">VY TRUC LE</h2>
-            <!--ngành học-->
+            <h2>VY TRUC LE</h2>
             <p>Bachelor of Psychology</p>
-            <!--địa chỉ nơi làm việc-->
             <p>Ho Chi Minh City, Vietnam</p>
             <ul>
-                <!--Sửa link-->
                 <li><a href="mailto:vytrucle.judy@gmail.com">Email</a></li>
                 <li><a href="https://www.researchgate.net/profile/Vy-Le-121?ev=hdr_xprf">ResearchGate</a></li>
                 <li><a href="https://www.linkedin.com/in/vy-truc-le-a10155276/">LinkedIn</a></li>
                 <li><a href="https://scholar.google.com/citations?user=pnxR0u0AAAAJ&hl=vi&oi=ao">Google Scholar</a></li>
             </ul>
-        </div>
+        </aside>
+
+        <!-- Nội dung chính -->
+        <main class="content">
+            <h1>About Me</h1>
+            <p>I hold a Bachelor’s degree in Psychology from Ho Chi Minh University of Education, Vietnam. During my undergraduate studies, I worked as a Research Assistant in the university’s laboratory under the supervision of Ph.D. Vinh-Long Tran-Chi, where I gained hands-on experience in psychological research.</p>
+
+            <h2>NEWS</h2>
+            <p><strong>[Jan 2025]</strong> One paper accepted to <a href="#">Discover Mental Health</a>.</p>
+            <p><strong>[Oct 2024]</strong> One paper accepted to <a href="#">Discover Mental Health</a>.</p>
+            <p><strong>[Jul 2024]</strong> Graduated with a Bachelor's degree in Psychology <a href="#">with a very good classification</a>.</p>
+            <p><strong>[Jun 2024]</strong> Started as a professional trainee at <a href="#">Hoa Sung Company</a>.</p>
+            <p><strong>[Apr 2024]</strong> Successfully defended the bachelor graduation thesis with a score of 9/10 at <a href="#">Ho Chi Minh University of Education</a>.</p>
+        </main>
+    </div>
         <div class="content">
             <!--Sửa lời giới thiệu-->
            <p>
