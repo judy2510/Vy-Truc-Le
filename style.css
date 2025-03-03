@@ -18,26 +18,18 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    max-width: 1200px; /* Hoặc giá trị lớn hơn nếu cần */
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
+    gap: 20px; /* Giãn cách giữa sidebar và content */
 }
-
-.content {
-    flex-grow: 1;
-    max-width: 900px;
-    width: 100%;
-    word-wrap: break-word;
-    overflow: visible;
-}
-
 
 /* Sidebar */
 .sidebar {
-    width: 30%;
+    width: 25%; /* Điều chỉnh cho phù hợp */
     min-width: 220px;
     text-align: center;
-    flex-shrink: 0; /* Giữ nguyên kích thước, tránh bị ép */
+    flex-shrink: 0; /* Đảm bảo không bị thu nhỏ quá mức */
 }
 
 /* Ảnh trong sidebar */
@@ -48,25 +40,28 @@ body {
 
 /* Nội dung chính */
 .content {
-    width: 100%;
-    max-width: 900px; /* Điều chỉnh tùy vào thiết kế */
-    overflow: visible;
-    word-wrap: break-word;
+    flex-grow: 1;
+    width: 75%;
+    overflow-wrap: break-word; /* Đảm bảo từ không bị tràn */
+    word-break: break-word;
 }
 
 /* Responsive cho iPad (từ 768px đến 1024px) */
 @media (max-width: 1024px) {
     .container {
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .sidebar {
-        width: 35%;
+        width: 100%;
+        text-align: center;
     }
 
     .content {
-        width: 60%;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
     }
 }
 
@@ -82,7 +77,11 @@ body {
         padding-left: 0;
     }
 
+    .sidebar {
+        margin-bottom: 20px; /* Tạo khoảng cách với nội dung chính */
+    }
+
     .content {
-        text-align: left; /* Để chữ không bị căn giữa */
+        text-align: left; /* Đảm bảo văn bản căn trái */
     }
 }
