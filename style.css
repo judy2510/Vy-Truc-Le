@@ -1,78 +1,84 @@
-/* Đảm bảo trang không bị tràn ngang */
-body, html {
+/* Đảm bảo trang có thể cuộn trên mọi thiết bị */
+html, body {
     width: 100%;
-    overflow-x: hidden;
+    height: 100%;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+    font-family: Arial, sans-serif;
+    background: #F8F9FA;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Cấu trúc chính */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Header */
+.top-header {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Đẩy nội dung xuống dưới header */
+.main-content {
+    margin-top: 80px; /* Cách header một khoảng */
     padding: 20px;
 }
 
-/* Container chính */
-.container {
-    display: flex;
-    align-items: flex-start;  
-    justify-content: space-between;
-    gap: 40px; /* Tăng khoảng cách giữa sidebar và nội dung */
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
+/* Sidebar */
 .sidebar {
-    width: 22%;  /* Giảm bớt kích thước sidebar */
-    min-width: 180px;
-    text-align: center;
-}
-
-/* Ảnh trong sidebar */
-.sidebar img {
-    width: 150px;
-    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 80px; /* Không bị che bởi header */
+    width: 250px; /* Điều chỉnh độ rộng */
+    height: calc(100vh - 80px); /* Tính toán chiều cao */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Cho phép cuộn sidebar nếu nội dung quá dài */
 }
 
 /* Nội dung chính */
 .content {
-    flex-grow: 1;  /* Giúp nội dung mở rộng hết phần còn lại */
-    min-width: 600px; /* Đảm bảo nội dung chính không quá hẹp */
-    padding-left: 20px;
+    margin-left: 270px; /* Cách sidebar một khoảng */
+    padding: 20px;
+    max-width: 900px; /* Giữ cho nội dung không quá rộng */
 }
 
-/* Responsive cho iPad */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: row;
-        justify-content: center;
-    }
+/* Giữ cho hình ảnh không bị méo */
+.sidebar img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
+/* Định dạng responsive */
+@media (max-width: 1024px) { /* iPad và thiết bị nhỏ hơn */
     .sidebar {
-        width: 35%;
+        width: 200px; /* Giảm kích thước sidebar */
     }
-
     .content {
-        width: 60%;
+        margin-left: 220px; /* Điều chỉnh để phù hợp */
+        max-width: 100%;
     }
 }
 
-/* Responsive cho điện thoại */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sidebar, .content {
+@media (max-width: 768px) { /* Điện thoại */
+    .sidebar {
+        position: relative; /* Không còn cố định */
         width: 100%;
-        padding-left: 0;
+        height: auto;
         text-align: center;
+    }
+    .content {
+        margin-left: 0;
+        padding: 15px;
     }
 }
