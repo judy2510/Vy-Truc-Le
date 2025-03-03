@@ -40,10 +40,10 @@ body {
 
 /* Nội dung chính */
 .content {
-    flex-grow: 1;
-    width: 70%;
-    padding-left: 20px;
-    min-width: auto; /* Đảm bảo không quá nhỏ */
+    width: 100%;
+    max-width: 900px; /* Điều chỉnh tùy vào thiết kế */
+    overflow: visible;
+    word-wrap: break-word;
 }
 
 /* Responsive cho iPad (từ 768px đến 1024px) */
