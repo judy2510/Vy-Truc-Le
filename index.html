@@ -5,138 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vy Truc Le</title>
     <style>
-        /* Đảm bảo trang hiển thị đúng */
-        html, body {
-            width: 100%;
-            height: 100%;
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: #F8F9FA;
+            box-sizing: border-box;
         }
-
-        /* Thanh tiêu đề cố định trên cùng */
-        .top-header {
-            width: 100%;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .navbar {
             position: fixed;
             top: 0;
-            left: 0;
-            background: #69b5d9;
-            color: white;
-            text-align: center;
+            width: 100%;
+            background-color: white;
             padding: 15px;
-            font-size: 20px;
+            text-align: center;
+            font-size: 22px;
             font-weight: bold;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
-
-        /* Container chính */
         .container {
             display: flex;
             max-width: 1200px;
-            margin: auto;
-            padding: 80px 20px 20px; /* Tăng padding để tránh bị che bởi header */
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
+            margin: 80px auto 20px;
             padding: 20px;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            background: transparent; /* Loại bỏ nền sidebar để đồng nhất */
         }
-
-        .sidebar img {
-            width: 150px;
-            height: auto;
-            display: block;
-            margin: 0 auto 15px;
+        .left-column {
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+        }
+        .left-column img {
+            width: 100%;
             border-radius: 10px;
         }
-
-        .sidebar h2, .sidebar p, .sidebar ul {
-            text-align: center;
-            color: #333;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-
-        /* Nội dung chính */
-        .content {
-            margin-left: 270px;
+        .right-column {
+            flex: 2;
+            background-color: white;
             padding: 20px;
-            flex: 1;
-            min-width: 400px; /* Tránh nội dung bị bó hẹp */
         }
-
-        /* Định dạng responsive */
-        @media (max-width: 1024px) {
-            .sidebar {
-                width: 200px;
-            }
-            .content {
-                margin-left: 220px;
-            }
-        }
-
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                padding-top: 100px; /* Để tránh bị header che mất */
+                align-items: center;
             }
-            .sidebar {
-                position: relative;
+            .left-column, .right-column {
                 width: 100%;
-                height: auto;
-                text-align: center;
-                padding-bottom: 20px;
-            }
-            .content {
-                margin-left: 0;
-                padding: 15px;
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Thanh tiêu đề cố định -->
-    <header class="top-header">
-        Vy Truc Le
-    </header>
-
+    <div class="navbar">Vy Truc Le</div>
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <img src="trucvy.png" alt="Profile Picture">
-            <h2>VY TRUC LE</h2>
-            <p>Bachelor of Psychology</p>
-            <p>Ho Chi Minh City, Vietnam</p>
-            <ul>
-                <li><a href="mailto:vytrucle.judy@gmail.com">Email</a></li>
-                <li><a href="https://www.researchgate.net/profile/Vy-Le-121?ev=hdr_xprf">ResearchGate</a></li>
-                <li><a href="https://www.linkedin.com/in/vy-truc-le-a10155276/">LinkedIn</a></li>
-                <li><a href="https://scholar.google.com/citations?user=pnxR0u0AAAAJ&hl=vi&oi=ao">Google Scholar</a></li>
-            </ul>
-        </aside>
-
-        <!-- Nội dung chính -->
-        <main class="content">
-            <h1>About Me</h1>
+        <div class="left-column">
+            <img src="profile.jpg" alt="Vy Truc Le">
+            <h2>Vy Truc Le</h2>
+            <p>Bachelor of Psychology<br>Ho Chi Minh City, Vietnam</p>
+        </div>
+        <div class="right-column">
+            <h2>About Me</h2>
             <p>
                 I hold a Bachelor’s degree in Psychology from Ho Chi Minh University of Education, Vietnam. During my undergraduate studies, I worked as a Research Assistant in the university’s laboratory 
                 <strong style="color: #69b5d9;">under the supervision of Ph.D. Vinh-Long Tran-Chi</strong>, where I gained hands-on experience in psychological research.  
