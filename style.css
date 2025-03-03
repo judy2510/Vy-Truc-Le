@@ -1,75 +1,53 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-.container {
-    max-width: 900px;
-    background: white;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-}
-.sidebar {
-    width: 30%;
-    text-align: center;
-}
-.sidebar img {
-    width: 150px;
-    border-radius: 50%;
-}
-.content {
-    width: 70%;
-    padding-left: 20px;
-}
-.news {
-    margin-top: 20px;
-}
-.news ul {
-    list-style: none;
-    padding: 0;
-}
-.news li {
-    margin-bottom: 10px;
-}
-h2, h3 {
-    color: #333;
-}
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-a:hover {
-    text-decoration: underline;
-}
-/* Đảm bảo trang web không bị tràn ra ngoài màn hình */
+/* Đảm bảo trang không bị tràn ngang */
 body, html {
     width: 100%;
     overflow-x: hidden;
 }
 
-/* Định dạng container để hiển thị tốt trên màn hình nhỏ */
-@media (max-width: 768px) {
+/* Tăng độ rộng của container để phù hợp với màn hình lớn hơn */
+.container {
+    max-width: 1000px; /* Hoặc tăng lên nếu cần */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Điều chỉnh sidebar và content */
+.sidebar {
+    width: 25%; /* Giảm từ 30% xuống để có thêm không gian cho nội dung */
+    text-align: center;
+}
+
+.content {
+    width: 75%;
+    padding-left: 20px;
+}
+
+/* Tối ưu hóa cho iPad (màn hình rộng 768px trở lên) */
+@media (max-width: 1024px) {
     .container {
-        flex-direction: column; /* Xếp dọc thay vì ngang */
-        align-items: center; /* Căn giữa nội dung */
-        padding: 10px;
+        max-width: 90%; /* Giữ bố cục rộng nhưng không bị ép vào mép */
+        flex-direction: row;
     }
 
     .sidebar {
-        width: 100%; /* Sidebar chiếm toàn bộ chiều rộng */
-        text-align: center;
-    }
-
-    .sidebar img {
-        width: 120px; /* Giảm kích thước ảnh nếu cần */
+        width: 30%;
     }
 
     .content {
-        width: 100%; /* Đảm bảo phần nội dung chiếm toàn bộ màn hình */
-        padding-left: 0;
+        width: 70%;
     }
 }
 
+/* Điều chỉnh hiển thị cho màn hình nhỏ hơn như điện thoại */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+        padding-left: 0;
+    }
+}
