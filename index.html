@@ -2,107 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vy Truc Le</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
-        /* Thanh header giống trang mẫu */
-        .top-header {
+        /* Đảm bảo trang có thể cuộn trên mọi thiết bị */
+        html, body {
             width: 100%;
-            background-color: white;
-            color: black;
-            text-align: left;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 15px 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #ddd;
-        }
-
-        /* Đẩy phần nội dung xuống để không bị che */
-        body {
+            height: 100%;
+            overflow-x: auto; /* Cho phép cuộn ngang */
+            overflow-y: auto; /* Cho phép cuộn dọc */
             font-family: Arial, sans-serif;
             background: #F8F9FA;
             margin: 0;
             padding: 0;
         }
 
-        .main-content {
-            margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
+        /* Container chính */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
         }
 
-        .container {
-            border: none;
-            box-shadow: none;
-            background: transparent;
-        }
-
-        /* Sidebar bên trái */
+        /* Sidebar */
         .sidebar {
-            position: fixed;
-            left: 0;
-            top: 70px; /* Để không bị che bởi header */
-            width: 200px;
-            height: calc(100vh - 70px); /* Để không bị che bởi header */
-            background-color: white;
+            flex: 1;
+            min-width: 250px;
+            background: white;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
-
-        /* Ảnh trong profile */
         .sidebar img {
             width: 100%;
             height: auto;
             border-radius: 10px;
-            display: block;
-            margin-bottom: 15px;
         }
 
-        /* Tiêu đề Profile */
-        .sidebar h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        /* Văn bản Profile */
-        .sidebar p {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        /* Danh sách liên kết */
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        .sidebar li {
-            margin: 5px 0;
-        }
-
-        .sidebar a {
-            color: #8c939b;
-            text-decoration: none;
-            font-size: 16px;
-            display: block;
-        }
-
-        /* Nội dung chính bên phải */
+        /* Nội dung chính */
         .content {
-            margin-left: 220px; /* Cách sidebar 200px + padding */
+            flex: 2;
             padding: 20px;
         }
 
-        h3 {
-            color: #8c939b;
-            font-size: 20px;
-            margin-top: 20px;
+        /* Định dạng responsive */
+        @media (max-width: 1024px) { /* iPad và thiết bị nhỏ hơn */
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) { /* Điện thoại */
+            .sidebar {
+                position: relative;
+                height: auto;
+            }
+            .content {
+                padding: 15px;
+            }
         }
     </style>
 </head>
