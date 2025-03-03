@@ -1,142 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vy Truc Le</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-/* Thanh header giống trang mẫu */
-.top-header {
-    width: 100%;
-    background-color: white; /* Màu nền */
-    color: black; /* Màu chữ */
-    text-align: left; /* Căn trái */
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 20px;
-    position: fixed; /* Cố định trên cùng */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Luôn hiển thị trên cùng */
-    border-bottom: 1px solid #ddd; /* Đường viền dưới */
-}
-
-/* Đẩy phần nội dung xuống để không bị che */
-        <div class="top-bar">
-    Vy Truc Le
-</div>
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.main-content {
-    margin-top: 70px; /* Điều chỉnh theo chiều cao của header */
-    padding: 20px;
-}
-        body {
-            <header class="top-header">
-    <h1>Vy Truc Le</h1>
-</header>
-
-            font-family: Arial, sans-serif;
-            background: #F8F9FA; /* Màu nền trắng */
+        /* Đảm bảo trang hiển thị đúng */
+        html, body {
+            width: 100%;
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background: #F8F9FA;
         }
-.container {
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-      .sidebar {
-    position: fixed; /* Cố định cột trái */
-    left: 0; /* Sát mép trái */
-    top: 0; /* Cố định từ trên xuống */
-    width: 180px; /* Điều chỉnh độ rộng */
-    height: 100vh; /* Chiều cao 100% màn hình */
-    background-color: white; /* Cùng màu với nền */
-    padding: 20px; /* Khoảng cách bên trong */
-}
 
-/* Ảnh trong profile */
-.sidebar img {
-    width: 100%; /* Căng hết chiều ngang */
-    height: auto;
-    border-radius: 10px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* Tiêu đề Profile */
-.sidebar h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-/* Văn bản Profile */
-.sidebar p {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* Danh sách liên kết */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 15px;
-}
-
-.sidebar li {
-    margin: 5px 0;
-}
-
-.sidebar a {
-    color: #8c939b;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-}
-
-/* Nội dung chính bên phải */
-.content {
-    margin-left: 100px; /* Để tránh bị dính vào cột profile */
-    padding: 20px;
-}
-        h3 {
-            color: #8c939b;
-            font-size: 20px;
-            margin-top: 20px;
+        /* Container chính */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
         }
-        .content p, .content li {
-            font-size: 15px;
-            line-height: 1.6;
+
+        /* Sidebar cố định */
+        .sidebar {
+            width: 250px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            height: 100vh; /* Chiều cao toàn màn hình */
+            overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+        }
+
+        .sidebar img {
+            width: 150px; /* Giảm kích thước ảnh */
+            height: auto;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .sidebar p {
+            text-align: center;
+            color: #555;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        /* Nội dung chính */
+        .content {
+            margin-left: 270px; /* Dịch sang phải để tránh trùng với sidebar */
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Định dạng responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 200px;
+            }
+            .content {
+                margin-left: 220px;
+            }
+        }
+
+        @media (max-width: 768px) { /* Điện thoại */
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+            .content {
+                margin-left: 0;
+                padding: 15px;
+            }
         }
     </style>
 </head>
-    <!--Sửa nội dung từ đây-->
 <body>
-    <div class="fixed-header">VY TRUC LE</div>
+
     <div class="container">
-        <div class="sidebar">
+        <!-- Sidebar -->
+        <aside class="sidebar">
             <img src="trucvy.png" alt="Profile Picture">
-            <!-- nội dung cột bên trái-->
-            <h2> <style="color: #8c939b; ">VY TRUC LE</h2>
-            <!--ngành học-->
+            <h2>VY TRUC LE</h2>
             <p>Bachelor of Psychology</p>
-            <!--địa chỉ nơi làm việc-->
             <p>Ho Chi Minh City, Vietnam</p>
             <ul>
-                <!--Sửa link-->
                 <li><a href="mailto:vytrucle.judy@gmail.com">Email</a></li>
                 <li><a href="https://www.researchgate.net/profile/Vy-Le-121?ev=hdr_xprf">ResearchGate</a></li>
                 <li><a href="https://www.linkedin.com/in/vy-truc-le-a10155276/">LinkedIn</a></li>
                 <li><a href="https://scholar.google.com/citations?user=pnxR0u0AAAAJ&hl=vi&oi=ao">Google Scholar</a></li>
             </ul>
-        </div>
+        </aside>
+        </main>
+    </div>
         <div class="content">
             <!--Sửa lời giới thiệu-->
            <p>
@@ -167,11 +146,10 @@ body {
         <hr class="section-divider"> 
         <h3 strong style="color: #50b9ea; ">EDUCATION</h3>
             <p><strong>[Oct 2020 – Jul 2024]</strong> Bachelor of Psychology,<strong style="color: #69b5d9; "> Ho Chi Minh University of Education, Vietnam.</strong></p>
+            <p><strong>[Aug 2017 – Jul 2020]</strong> Student of the Literature Specialized Class at <strong style="color: #69b5d9; ">Phan Ngoc Hien High School for the Gifted.</strong></p>
                 <p><strong>Grade:</strong> 3.58/4.00 (very good classification).<p>
                 <p><strong>Thesis:</strong> Attitudes Toward Seeking Professional Psychological Help Among Students with Adverse Childhood Experiences in Ho Chi Minh City (9.0/10.0).<p>
                 <p><strong>Advisor:</strong> MSc. Hoai-Duc Huynh-Tran.<p>
-            <p><strong>[Aug 2017 – Jul 2020]</strong> Student of the Literature Specialized Class at <strong style="color: #69b5d9; ">Phan Ngoc Hien High School for the Gifted.</strong></p>
-         
                     
         <hr class="section-divider"> 
         <h3 strong style="color: #50b9ea; ">PUBLICATIONS</h3>
