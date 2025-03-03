@@ -14,15 +14,23 @@ body {
 
 /* Container chính */
 .container {
-    max-width: 1100px;
-    background: white;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Tránh chồng lấn */
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px; /* Hoặc giá trị lớn hơn nếu cần */
+    width: 90%;
+    margin: 0 auto;
 }
+
+.content {
+    flex-grow: 1;
+    max-width: 900px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow: visible;
+}
+
 
 /* Sidebar */
 .sidebar {
