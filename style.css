@@ -8,9 +8,9 @@
 /* Cấu trúc chính */
 body {
     font-family: Arial, sans-serif;
-     color: #a9a8a8
     background-color: #f4f4f4;
     padding: 20px;
+    overflow-x: hidden; /* Tránh cuộn ngang ngoài ý muốn */
 }
 
 /* Container chính */
@@ -22,15 +22,15 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    gap: 20px; /* Giãn cách giữa sidebar và content */
+    flex-wrap: wrap; /* Đảm bảo xuống hàng nếu không đủ chỗ */
 }
 
 /* Sidebar */
 .sidebar {
-    width: 25%; /* Điều chỉnh cho phù hợp */
-    min-width: 220px;
+    width: 30%;
+    min-width: 250px; /* Đảm bảo không bị quá nhỏ */
     text-align: center;
-    flex-shrink: 0; /* Đảm bảo không bị thu nhỏ quá mức */
+    flex-shrink: 0;
 }
 
 /* Ảnh trong sidebar */
@@ -42,12 +42,14 @@ body {
 /* Nội dung chính */
 .content {
     flex-grow: 1;
-    width: 75%;
-    overflow-wrap: break-word; /* Đảm bảo từ không bị tràn */
-    word-break: break-word;
+    max-width: 900px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow: visible;
+    padding-left: 20px;
 }
 
-/* Responsive cho iPad (từ 768px đến 1024px) */
+/* Responsive cho iPad (768px - 1024px) */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
@@ -61,28 +63,27 @@ body {
 
     .content {
         width: 100%;
-        text-align: left;
-        padding: 10px;
+        padding-left: 0;
     }
 }
 
-/* Responsive cho màn hình nhỏ (điện thoại, iPad dọc) */
+/* Responsive cho điện thoại (dưới 768px) */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: center;
     }
 
-    .sidebar, .content {
-        width: 100%;
-        padding-left: 0;
-    }
-
     .sidebar {
-        margin-bottom: 20px; /* Tạo khoảng cách với nội dung chính */
+        width: 100%;
+        padding: 10px;
+        text-align: center;
     }
 
     .content {
-        text-align: left; /* Đảm bảo văn bản căn trái */
+        width: 100%;
+        padding: 10px;
+        text-align: left; /* Để chữ không bị căn giữa */
+        word-wrap: break-word;
     }
 }
