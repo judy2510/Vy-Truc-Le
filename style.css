@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding-top: 80px; /* Điều chỉnh để tránh nội dung bị che bởi thanh tiêu đề */
+    padding-top: 100px; /* Điều chỉnh để tránh nội dung bị che bởi thanh tiêu đề */
 }
 
 /* Thanh tiêu đề cố định */
@@ -36,7 +36,7 @@ body {
     align-items: flex-start;
     max-width: 1200px;
     width: 90%;
-    margin: 20px auto 0 auto; /* Thêm khoảng cách trên để tránh header che nội dung */
+    margin: 30px auto 0 auto; /* Thêm khoảng cách trên để tránh header che nội dung */
 }
 
 /* Sidebar */
