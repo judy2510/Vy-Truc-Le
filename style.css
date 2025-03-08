@@ -31,7 +31,7 @@ body {
     text-align: center;
     flex-shrink: 0;
     padding: 10px;
-    font-size: 13px;
+    font-size: 13px !important;
 }
 
 /* Ảnh trong sidebar */
