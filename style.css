@@ -33,6 +33,14 @@ body {
     padding: 10px;
     font-size: 13px !important;
 }
+.sidebar ul {
+    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+    padding-left: 0; /* Xóa khoảng cách mặc định của danh sách */
+    text-align: left; /* Căn lề trái nội dung */
+}
+.sidebar ul li {
+    margin-bottom: 5px; /* Tạo khoảng cách giữa các mục */
+}
 
 /* Ảnh trong sidebar */
 .sidebar img {
