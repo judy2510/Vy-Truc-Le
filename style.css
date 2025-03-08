@@ -28,10 +28,10 @@ body {
 .sidebar {
     width: 25%;
     min-width: 200px; /* Đảm bảo không bị quá nhỏ */
-    text-align: center;
+    text-align: left;
     flex-shrink: 0;
     padding: 10px;
-    font-size: 13px !important;
+    font-size: 10px !important;
 }
 .sidebar ul {
     list-style-type: none; /* Bỏ dấu chấm đầu dòng */
