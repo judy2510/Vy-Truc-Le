@@ -26,8 +26,8 @@ body {
 
 /* Sidebar */
 .sidebar {
-    width: 30%;
-    min-width: 250px; /* Đảm bảo không bị quá nhỏ */
+    width: 25%;
+    min-width: 200px; /* Đảm bảo không bị quá nhỏ */
     text-align: center;
     flex-shrink: 0;
     padding: 10px;
@@ -35,7 +35,7 @@ body {
 
 /* Ảnh trong sidebar */
 .sidebar img {
-    width: 150px;
+    width: 120px;
     border-radius: 50%;
 }
 
