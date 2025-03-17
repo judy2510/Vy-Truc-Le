@@ -7,7 +7,7 @@
 
 /* Cấu trúc chính */
 body {
-    font-family:'Open Sauce', sans-serif;
+    font-family:'DM Sans', sans-serif;
     background-color: #f4f4f4;
     color: #424949;
     padding: 20px;
@@ -57,12 +57,6 @@ body {
     word-wrap: break-word;
     overflow: hidden;
     padding-left: 20px;
-}
-@font-face {
-  font-family: 'Open Sauce';
-  src: url('/fonts/OpenSauce-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Responsive cho iPad (768px - 1024px) */
