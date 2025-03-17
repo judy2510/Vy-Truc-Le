@@ -48,6 +48,13 @@ body {
     border-radius: 50%;
 }
 
+.sidebar-icons img {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+}
+
+
 /* Nội dung chính */
 .content {
     flex-grow: 1;
