@@ -32,6 +32,7 @@ body {
     flex-shrink: 0;
     padding: 10px;
     font-size: 10px !important;
+    color: #2d8bba;
 }
 .sidebar ul {
     list-style-type: none; /* Bỏ dấu chấm đầu dòng */
